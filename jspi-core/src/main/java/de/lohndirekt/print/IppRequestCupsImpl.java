@@ -257,7 +257,7 @@ class IppRequestCupsImpl implements IppRequest {
     }
 
     /**
-     * @param stream
+     * @param data Stream
      */
     public void setData(InputStream data) {
         this.data = data;

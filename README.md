@@ -30,7 +30,7 @@ This library enables you to add remote printing capabilities to your Java applic
 
 ###API and Examples
 
-Examples are available in the `src/test` directory along with the tests.
+Examples are available in the `jspi-core/src/test` directory along with the tests.
 
 #### Notes from the History : jspi
 This project is based on the original project exported from code.google.com/p/jspi (LGPL)

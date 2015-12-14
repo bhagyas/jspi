@@ -50,7 +50,7 @@ import de.lohndirekt.print.attribute.ipp.NaturalLanguage;
 import de.lohndirekt.print.attribute.ipp.printerdesc.supported.OperationsSupported;
 
 /**
- * @author bpusch, speters, sefftinge
+ * @author bpusch, speters, sefftinge, bhagyas
  *  
  */
 class IppRequestCupsImpl implements IppRequest {
@@ -144,8 +144,8 @@ class IppRequestCupsImpl implements IppRequest {
     /**
      * @param printerAttributes
      */
-    public void setPrinterAttributes(AttributeSet attrs) {
-        this.printerAttributes = attrs;
+    public void setPrinterAttributes(AttributeSet printerAttributes) {
+        this.printerAttributes = printerAttributes;
     }
 
     /**

@@ -42,6 +42,7 @@ import de.lohndirekt.print.attribute.auth.RequestingUserPassword;
 /** 
  * 
  * @author bpusch
+ * @author bhagyas
  * 
  * <p>
  * This is an implementation of the Java Print Service API for IPP.<p>
@@ -80,7 +81,7 @@ public class IppPrintServiceLookup extends PrintServiceLookup {
         String myUri = (String) System.getProperties().get(URI_KEY);
         String user = (String) System.getProperties().get(USERNAME_KEY);
         String password = (String) System.getProperties().get(PASSWORD_KEY);
-        URI uri = null;
+        URI uri;
         if (myUri == null) {
             throw new NullPointerException("System property " + URI_KEY + " not set!");
         } else if (user == null) {

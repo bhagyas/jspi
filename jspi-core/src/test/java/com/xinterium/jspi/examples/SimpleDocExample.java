@@ -16,7 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  
  */
-package examples;
+package com.xinterium.jspi.examples;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -151,7 +151,7 @@ public class SimpleDocExample {
      * @return
      */
     private static String readStdIn() {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int ch;
         try {
             while ((ch = System.in.read()) != 10) {

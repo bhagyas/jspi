@@ -30,6 +30,6 @@ import java.io.IOException;
 interface MultiDocListener {
 
 	
-	public void processEvent(MultiDocEvent event) throws IOException;
+	void processEvent(MultiDocEvent event) throws IOException;
 
 }

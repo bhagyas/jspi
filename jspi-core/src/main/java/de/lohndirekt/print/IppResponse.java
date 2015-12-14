@@ -30,9 +30,9 @@ public interface IppResponse {
     /**
      * @return attributes
      */
-    public abstract Map getAttributes();
+    Map getAttributes();
     /**
      * @return the IppStatus 
      */
-    public abstract IppStatus getStatus();
+    IppStatus getStatus();
 }

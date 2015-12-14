@@ -54,10 +54,9 @@ public final class IppRequestFactory {
 
             try {
                 Constructor constructor = clazz
-                        .getDeclaredConstructor(new Class[] { URI.class,
-                                OperationsSupported.class });
-                request = (IppRequest) constructor.newInstance(new Object[] {
-                        uri, operation });
+                        .getDeclaredConstructor(URI.class,
+                                OperationsSupported.class);
+                request = (IppRequest) constructor.newInstance(uri, operation);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

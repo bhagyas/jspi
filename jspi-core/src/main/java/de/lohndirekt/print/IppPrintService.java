@@ -281,7 +281,7 @@ public class IppPrintService implements PrintService {
 		} else if (category.equals(IppAttributeName.FINISHINGS.getCategory())) {
 			Attribute attr = getAttribute(IppAttributeName.FINISHINGS_DEFAULT.getCategory());
 			if (attr != null) {
-				value = new Integer(((IntegerSyntax) attr).toString());
+				value = new Integer(attr.toString());
 			}
 		} else if (category.equals(IppAttributeName.SIDES.getCategory())) {
 			Attribute attr = getAttribute(IppAttributeName.SIDES_DEFAULT.getCategory());

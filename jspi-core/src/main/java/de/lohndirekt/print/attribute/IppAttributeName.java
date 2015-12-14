@@ -332,8 +332,8 @@ public final class IppAttributeName {
 		new IppAttributeName(new OutputBinSupported("x", Locale.getDefault()));
 	
 	
-	private static Map attributesByName = new HashMap();;
-	private static Map attributesByCategory = new HashMap();;
+	private static Map attributesByName = new HashMap();
+	private static Map attributesByCategory = new HashMap();
 
 	/**
 		 * 

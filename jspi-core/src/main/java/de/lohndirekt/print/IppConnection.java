@@ -21,8 +21,6 @@ package de.lohndirekt.print;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.apache.commons.httpclient.HttpException;
-
 /**
  *  
  * @author sefftinge
@@ -33,18 +31,18 @@ interface IppConnection {
      * @return content of the response
      * @throws IOException
      */
-    public abstract InputStream getIppResponse() throws IOException;
+    InputStream getIppResponse() throws IOException;
 
     /**
      * @return the statuscode of last request
      * @throws IOException
      */
-    public abstract int getStatusCode() throws IOException;
+    int getStatusCode() throws IOException;
 
     /**
      * @param stream
      */
-    public abstract void setIppRequest(InputStream stream);
+    void setIppRequest(InputStream stream);
 
-    public abstract boolean execute() throws HttpException, IOException;
+    boolean execute() throws IOException;
 }

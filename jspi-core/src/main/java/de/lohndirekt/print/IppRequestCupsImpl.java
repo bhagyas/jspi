@@ -74,7 +74,7 @@ class IppRequestCupsImpl implements IppRequest {
         private void parseResponse(InputStream response) throws IOException {
             byte[] header = new byte[8];
             response.read(header);
-            this.status = IppStatus.get((int) (header[2] << 8)
+            this.status = IppStatus.get((header[2] << 8)
                     + (int) header[3]);
             if (response.available() != 0) {
                 this.attributes = AttributeParser.parseResponse(response);
@@ -193,7 +193,7 @@ class IppRequestCupsImpl implements IppRequest {
             out.write((byte) IppDelimiterTag.BEGIN_JOB_ATTRIBUTES
                             .getValue());
             for (int i = 0; i < jobAttributes.toArray().length; i++) {
-                Attribute attribute = (Attribute) jobAttributes.toArray()[i];
+                Attribute attribute = jobAttributes.toArray()[i];
                 AttributeWriter.attributeBytes(attribute, out);
             }
         }

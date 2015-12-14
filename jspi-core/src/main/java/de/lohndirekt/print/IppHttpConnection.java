@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 
 import org.apache.commons.httpclient.Credentials;
 import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.UsernamePasswordCredentials;
 import org.apache.commons.httpclient.methods.EntityEnclosingMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
@@ -120,7 +119,7 @@ class IppHttpConnection implements IppConnection {
         method.setRequestBody(stream);
     }
     
-    public boolean execute() throws HttpException, IOException {
+    public boolean execute() throws IOException {
         if (this.method.validate()) {
             httpConn.executeMethod(method);
             if (this.getStatusCode()==HttpURLConnection.HTTP_UNAUTHORIZED) {

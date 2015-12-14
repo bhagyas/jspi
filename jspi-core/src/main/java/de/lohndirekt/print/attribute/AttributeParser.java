@@ -203,8 +203,8 @@ public final class AttributeParser {
 		int deci = in.read();
 		int mili = deci * 100;
 		char direction = (char) in.read();
-		int hoursFromUtc = (int) in.read();
-		int minutesFromUtc = (int) in.read();
+		int hoursFromUtc = in.read();
+		int minutesFromUtc = in.read();
 
 		String yearString = fourDigits.format((long) year);
 		String monthString = twoDigits.format((long) month);

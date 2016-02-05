@@ -19,9 +19,9 @@ This library enables you to add remote printing capabilities to your Java applic
 
    Add the following on your `pom.xml`
 
-	```
+    ```
 	<dependency>
-      <groupId>com.xinterium.jspi</groupId>
+      <groupId>com.xinterium</groupId>
       <artifactId>jspi-core</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>

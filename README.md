@@ -1,11 +1,11 @@
-##JSPI - Java Internet Printing Protocol Implementation
+## JSPI - Java Internet Printing Protocol Implementation
 
 This library enables you to add remote printing capabilities to your Java applications running on servers and other client applications.
 
 
-###Usage
+### Usage
 
-####Adding dependency using Apache Maven
+#### Adding dependency using Apache Maven
 
 1. Clone the project
 
@@ -21,27 +21,27 @@ This library enables you to add remote printing capabilities to your Java applic
 
     ```
 	<dependency>
-      <groupId>com.xinterium</groupId>
+      <groupId>com.xinterium.jspi</groupId>
       <artifactId>jspi-core</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     ```
 
 
-###API and Examples
+### API and Examples
 
 Examples are available in the `jspi-core/src/test` directory along with the tests.
 
 #### Notes from the History : 
 
-#####jspi
+##### jspi
 This project is based on the original project exported from code.google.com/p/jspi (LGPL)
 
-#####Description: 
+##### Description: 
 
 We realize a pure java implementation of the internet printing protocol (ipp) implementing Java Print Service API (jsp). This implementation can be useful for both server and client side code, so this helps in high level printing services, virtual printers for document conversion and so on.
 
-###Authors
+### Authors
 - Bhagya Silva ([https://about.me/bhagyas](https://about.me/bhagyas))
 
 Original library author information can be found on the Google Code project location.

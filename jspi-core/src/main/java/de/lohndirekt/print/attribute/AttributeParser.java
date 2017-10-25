@@ -42,6 +42,7 @@ import javax.print.attribute.Attribute;
 import javax.print.attribute.EnumSyntax;
 import javax.print.attribute.standard.JobStateReason;
 import javax.print.attribute.standard.JobStateReasons;
+import javax.print.attribute.standard.PrinterResolution;
 import javax.print.attribute.standard.PrinterStateReason;
 import javax.print.attribute.standard.PrinterStateReasons;
 import javax.print.attribute.standard.Severity;
@@ -448,6 +449,11 @@ public final class AttributeParser {
 		} else if (valueTag == IppValueTag.NOVALUE.getValue()) {
 			values = new Object[] {
 			};
+		} else if (valueTag == IppValueTag.RESOLUTION.getValue()) {
+			int crossFeedDirection = parseInt4(in);
+			int feedDirection = parseInt4(in);
+			int units = in.read();
+			values = new Object[] { new PrinterResolution(crossFeedDirection, feedDirection, units) };
 		} else {
 			throw new IllegalArgumentException("\"" + Integer.toHexString(valueTag) + "\" is not a valid value-tag");
 		}

@@ -131,12 +131,12 @@ public final class AttributeParser {
 	     * @param lastAttribute
 	     * @return
 	     */
-	private static Attribute parseAttribute(InputStream in, Attribute lastAttribute)
+	static Attribute parseAttribute(InputStream in, Attribute lastAttribute)
 		throws IOException, EndOfAttributesException {
 
 		int valueTag;
 		while ((valueTag = in.read()) < IppValueTag.UNSUPPORTED_VALUE.getValue()) {
-			if (valueTag == IppDelimiterTag.END_ATTRIBUTES.getValue()) {
+			if (valueTag == IppDelimiterTag.END_ATTRIBUTES.getValue() || valueTag < 0) {
 				throw END_OF_ATTRIBUTES_EXCEPTION;
 			}
 		}
